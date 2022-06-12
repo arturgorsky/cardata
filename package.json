@@ -1,0 +1,16 @@
+{
+  "name": "cardata",
+  "version": "1.0.0",
+  "description": "auto market tracing app",
+  "main": "index.js",
+  "repository": "https://github.com/arturgorsky/cardata.git",
+  "author": "arturgorsky <gorski.artur1@gmail.com>",
+  "license": "private",
+  "private": true,
+  "scripts": {
+    "start": "npx tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  }
+}
