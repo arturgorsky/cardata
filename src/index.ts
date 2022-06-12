@@ -1,12 +1,13 @@
-import axios from "axios";
+import { saveDataToFile } from "./csv-handler";
+import { getNumberOfCars } from "./scrapers/total-number-of-cars";
 
-const url =
-  "https://www.otomoto.pl/i2/ajax/ad-item/total/?search[category_id]=29";
-
-const getNumberOfCars = async () => {
-  const numberOfCars = await (await axios.get(url)).data.total_count;
-  const timestamp = new Date();
-  console.log(timestamp, numberOfCars);
+const main = async () => {
+  const oneHourInMs = 1000 * 60 * 60;
+  setInterval(async () => {
+    console.log("New request send");
+    const data = await getNumberOfCars();
+    saveDataToFile(data);
+  }, oneHourInMs);
 };
 
-getNumberOfCars();
+main();

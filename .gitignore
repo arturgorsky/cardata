@@ -105,3 +105,6 @@ dist
 
 # TS build directory
 build/
+
+# data file
+data.csv
