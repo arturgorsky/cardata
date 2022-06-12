@@ -8,9 +8,13 @@
   "license": "private",
   "private": true,
   "scripts": {
-    "start": "npx tsc"
+    "start": "npx tsc && node build/index.js"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
   }
 }
